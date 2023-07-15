@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+<body class="box">
+    <h1 id="heading"><%= listTitle %> </h1>
+    <ul>
+        
+        <% for(let i=0;i<listItem.length;i++) { %>
+            <li><%=listItem[i]%></li>
+        <%}%>
+        
+    </ul>
+
+    <form action="/" method="post">
+        <label >Your Todo LIst Item:</label>
+        <input name="listItem" type="text" placeholder="item name....">
+        <button type="submit" name="list" value=<%= listTitle %>>+</button>
+    </form>
+</body>
+<%- include("footer"); -%>
